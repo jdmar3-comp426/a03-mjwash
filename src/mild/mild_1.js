@@ -79,7 +79,7 @@ export function countArray(array) {
     }
     let result = [];
     for(let i = 0; i <= objects.length; i++) {
-        result.push("'" + objects[i] + "': " + counts[i]);
+        result.push(objects[i]  + counts[i]);
     }
     return result;
 }
