@@ -75,6 +75,7 @@ export function countArray(array) {
         }
         if (checker) {
             objects.push[array[i]];
+            counts.push[1];
         }
     }
     let result = [];
