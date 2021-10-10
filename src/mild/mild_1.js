@@ -63,5 +63,23 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-
+    let counts = [];
+    let objects = [];
+    let checker = true;
+    for(let i = 0; i <= array.length; i++) {
+        for(let j = 0; j <= objects.length; j++) {
+            if (array[i] === objects[j]) {
+                checker = false;
+                counts[j] ++;
+            }
+        }
+        if (checker) {
+            objects.push[array[i]];
+        }
+    }
+    let result = [];
+    for(let i = 0; i <= objects.length; i++) {
+        result.push("'" + objects[i] + "': " + counts[i]);
+    }
+    return result;
 }
