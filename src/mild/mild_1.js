@@ -9,8 +9,7 @@
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
 export function sumToString(a, b) {
-    let result = a + b;
-    return result.toString;
+    return '${a} + ${b} = ${a+b}'
 }
 
 
@@ -50,7 +49,7 @@ export function maxAndMin(numbers) {
             min = numbers[i];
         }
     }
-    return {min, max};
+    return {max, min};
 }
 
 /**
