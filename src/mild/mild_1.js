@@ -71,7 +71,7 @@ export function countArray(array) {
     arr.sort();
     let previous;
     for (let i = 0; i < array.length; i++) {
-        if (arr[i] != prev) {
+        if (arr[i] != previous) {
             keys.push(arr[i]);
             counts.push(1);
         } 
