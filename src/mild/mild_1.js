@@ -79,9 +79,9 @@ export function countArray(array) {
             counts.push[1];
         }
     }
-    object = keys(keys);
+    
     for(let i = 0; i < keys.length; i++) {
-        object[i] = counts[i];
+        object[i] = {[keys[i]]: counts[i]};
     }
     return object;
 }
