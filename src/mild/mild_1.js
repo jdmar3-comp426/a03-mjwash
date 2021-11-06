@@ -67,21 +67,18 @@ export function countArray(array) {
     let keys = [];
     let checker = true;
     const object = [];
-    for(let i = 0; i <= array.length; i++) {
-        for(let j = 0; j <= keys.length; j++) {
-            if (array[i] === keys[j]) {
-                checker = false;
-                counts[j] ++;
-            }
-        }
-        if (checker) {
-            keys.push[array[i]];
-            counts.push[1];
-        }
+    let arr= [...array];
+    arr.sort();
+    let previous;
+    for (let i = 0; i < array.length; i++) {
+        if (arr[i] != prev) {
+            keys.push(arr[i]);
+            counts.push(1);
+        } 
+        previous = arr[i];
     }
-    
-    for(let i = 0; i < keys.length; i++) {
-        object[i] = {[keys[i]]: counts[i]};
+    for(let j = 0; j < keys.length; j++) {
+        object.push = {[keys[i]]: counts[i]}
     }
     return object;
 }
