@@ -66,7 +66,7 @@ export function countArray(array) {
     let counts = [];
     let keys = [];
     let checker = true;
-    const object;
+    let object;
     let arr= [...array];
     arr.sort();
     let previous;
