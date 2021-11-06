@@ -79,7 +79,7 @@ export function countArray(array) {
     }
     
     for(let j = 0; j < keys.length; j++) {
-        object.push = {[keys[j]]: counts[j]}
+        object.push = {[keys[j]]: counts[j]};
         console.log(object[j]);
     }
     return object;
