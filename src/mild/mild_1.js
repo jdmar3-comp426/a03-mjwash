@@ -64,23 +64,24 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
     let counts = [];
-    let objects = [];
+    let keys = [];
     let checker = true;
+    const object = [];
     for(let i = 0; i <= array.length; i++) {
-        for(let j = 0; j <= objects.length; j++) {
-            if (array[i] === objects[j]) {
+        for(let j = 0; j <= keys.length; j++) {
+            if (array[i] === keys[j]) {
                 checker = false;
                 counts[j] ++;
             }
         }
         if (checker) {
-            objects.push[array[i]];
+            keys.push[array[i]];
             counts.push[1];
         }
     }
-    let result = [];
-    for(let i = 0; i <= objects.length; i++) {
-        result.push(objects[i]  + counts[i]);
+    object = keys(keys);
+    for(let i = 0; i < keys.length; i++) {
+        object[i] = counts[i];
     }
-    return result;
+    return object;
 }
