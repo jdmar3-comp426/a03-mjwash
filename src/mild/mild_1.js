@@ -77,8 +77,10 @@ export function countArray(array) {
         } 
         previous = arr[i];
     }
+    
     for(let j = 0; j < keys.length; j++) {
-        object.push = {[keys[i]]: counts[i]}
+        object.push = {[keys[j]]: counts[j]}
+        console.log(object[j]);
     }
     return object;
 }
