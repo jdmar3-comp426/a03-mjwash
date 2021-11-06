@@ -66,7 +66,7 @@ export function countArray(array) {
     let counts = [];
     let keys = [];
     let checker = true;
-    const object = [];
+    const object;
     let arr= [...array];
     arr.sort();
     let previous;
@@ -79,8 +79,7 @@ export function countArray(array) {
     }
     
     for(let j = 0; j < keys.length; j++) {
-        object.push = {[keys[j]]: counts[j]};
-        console.log(object[j]);
+        Object.assign (object, {[keys[j]]: counts[j]});
     }
     return object;
 }
