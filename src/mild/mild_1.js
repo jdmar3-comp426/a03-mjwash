@@ -74,12 +74,15 @@ export function countArray(array) {
         if (arr[i] != previous) {
             keys.push(arr[i]);
             counts.push(1);
-        } 
+        }  else {
+            counts[keys.indexOf[arr[i]]] += 1;
+        }
         previous = arr[i];
     }
     
     for(let j = 0; j < keys.length; j++) {
         Object.assign (object, {[keys[j]]: counts[j]});
     }
+    console.log(object);
     return object;
 }
