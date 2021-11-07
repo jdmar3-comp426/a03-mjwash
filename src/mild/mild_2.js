@@ -100,4 +100,5 @@ export function removeKeys(object, keyList) {
    for(let element of keyList) {
       temp = removeKeyNonDestructive(temp, element);
    }
+   return temp;
 }
