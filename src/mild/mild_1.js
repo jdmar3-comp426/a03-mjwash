@@ -77,7 +77,7 @@ export function countArray(array) {
             counts.push(1);
             token++;
         }  else {
-            counts[i] += 1;
+            counts[token] += 1;
         }
         previous = arr[i];
     }
