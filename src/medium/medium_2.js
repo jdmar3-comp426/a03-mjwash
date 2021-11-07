@@ -21,7 +21,7 @@ see under the methods section
  */
 export const allCarStats = {
     avgMpg: undefined,
-    allYearStats: getStatistics(mpg_data),
+    allYearStats: undefined,
     ratioHybrids: undefined,
 };
 
