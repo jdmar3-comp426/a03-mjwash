@@ -70,12 +70,14 @@ export function countArray(array) {
     let arr= [...array];
     arr.sort();
     let previous;
+    let token;
     for (let i = 0; i < array.length; i++) {
         if (arr[i] != previous) {
             keys.push(arr[i]);
             counts.push(1);
+            token = i;
         }  else {
-            counts[keys.indexOf[arr[i]]] += 1;
+            counts[i] += 1;
         }
         previous = arr[i];
     }
