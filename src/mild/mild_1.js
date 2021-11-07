@@ -85,6 +85,5 @@ export function countArray(array) {
     for(let j = 0; j < keys.length; j++) {
         Object.assign (object, {[keys[j]]: counts[j]});
     }
-    console.log(object);
     return object;
 }
