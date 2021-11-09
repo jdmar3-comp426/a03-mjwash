@@ -22,7 +22,7 @@ see under the methods section
 export const allCarStats = {
     avgMpg: {city: getSum(mpg_data.map(function (x) {return x.city_mpg}))/mpg_data.length, highway: getSum(mpg_data.map(function (x) {return x.highway_mpg}))/mpg_data.length},
     allYearStats: getStatistics(mpg_data.map(function (x) {return x.year})),
-    ratioHybrids: 2,
+    ratioHybrids: mpg_data.filter(x => x.hybrid == true).length/mpg_data.length,
 };
 
 
