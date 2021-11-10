@@ -90,29 +90,29 @@ export const moreStats = {
             city: getSum(mpg_data.filter(y => y.year === 2009 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === true).length,
             highway: getSum((mpg_data.filter(y => y.year === 2009 && y.hybrid === true)).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === true).length
         }, notHybrid: {
-            city: getSum(mpg_data.filter(y => y.year === '2009' && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2009' && y.hybrid === false).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2009' && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2009' && y.hybrid === false).length
+            city: getSum(mpg_data.filter(y => y.year === 2009 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2009 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === false).length
         }},
         '2010': {hybrid: {
-            city: getSum(mpg_data.filter(y => y.year === '2010' && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2010' && y.hybrid === true).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2010' && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2010' && y.hybrid === true).length
+            city: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === true).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === true).length
         }, notHybrid: {
-            city: getSum(mpg_data.filter(y => y.year === '2010' && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2010' && y.hybrid === false).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2010' && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2010' && y.hybrid === false).length
+            city: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === false).length
         }},
         '2011': {hybrid: {
-            city: getSum(mpg_data.filter(y => y.year === '2011' && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2011' && y.hybrid === true).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2011' && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2011' && y.hybrid === true).length
+            city: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === true).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === true).length
         }, notHybrid: {
-            city: getSum(mpg_data.filter(y => y.year === '2011' && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2011' && y.hybrid === false).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2011' && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2011' && y.hybrid === false).length
+            city: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === false).length
         }},
         '2012': {hybrid: {
-            city: getSum(mpg_data.filter(y => y.year === '2012' && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2012' && y.hybrid === true).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2012' && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2012' && y.hybrid === true).length
+            city: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === true).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === true).length
         }, notHybrid: {
-            city: getSum(mpg_data.filter(y => y.year === '2012' && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2012' && y.hybrid === false).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2012' && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2012' && y.hybrid === false).length
+            city: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === false).length
         }}
     }
 };
