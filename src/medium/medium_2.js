@@ -87,8 +87,8 @@ export const moreStats = {
     makerHybrids: undefined,
     avgMpgByYearAndHybrid: {
         '2009': {hybrid: {
-            city: getSum(mpg_data.map(function (x) {return x.city_mpg}).filter(y => y.year === '2009' && y.hybrid === true))/mpg_data.filter(y => y.year === '2009' && y.hybrid === true).length,
-            highway: getSum(mpg_data.filter(y => y.year === '2009' && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2009' && y.hybrid === true).length
+            city: getSum((mpg_data.filter(y => y.year === '2009' && y.hybrid === true)).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2009' && y.hybrid === true).length,
+            highway: getSum((mpg_data.filter(y => y.year === '2009' && y.hybrid === true)).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2009' && y.hybrid === true).length
         }, notHybrid: {
             city: getSum(mpg_data.filter(y => y.year === '2009' && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === '2009' && y.hybrid === false).length,
             highway: getSum(mpg_data.filter(y => y.year === '2009' && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === '2009' && y.hybrid === false).length
