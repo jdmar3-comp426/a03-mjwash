@@ -1,5 +1,5 @@
 import mpg_data from "./data/mpg_data.js";
-import {getStatistics} from "./medium_1.js";
+import {getStatistics, getSum} from "./medium_1.js";
 
 /*
 This section can be done by using the array prototype functions.
@@ -20,9 +20,9 @@ see under the methods section
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: {city: getSum(mpg_data.map(function (x) {return x.city_mpg}))/mpg_data.length, highway: getSum(mpg_data.map(function (x) {return x.highway_mpg}))/mpg_data.length},
+    allYearStats: getStatistics(mpg_data.map(function (x) {return x.year})),
+    ratioHybrids: mpg_data.filter(x => x.hybrid == true).length/mpg_data.length,
 };
 
 
@@ -85,5 +85,34 @@ export const allCarStats = {
  */
 export const moreStats = {
     makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    avgMpgByYearAndHybrid: {
+        '2009': {hybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2009 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === true).length,
+            highway: getSum((mpg_data.filter(y => y.year === 2009 && y.hybrid === true)).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === true).length
+        }, notHybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2009 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2009 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2009 && y.hybrid === false).length
+        }},
+        '2010': {hybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === true).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === true).length
+        }, notHybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2010 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2010 && y.hybrid === false).length
+        }},
+        '2011': {hybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === true).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === true).length
+        }, notHybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2011 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2011 && y.hybrid === false).length
+        }},
+        '2012': {hybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === true).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === true).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === true).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === true).length
+        }, notHybrid: {
+            city: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === false).map(function (x) {return x.city_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === false).length,
+            highway: getSum(mpg_data.filter(y => y.year === 2012 && y.hybrid === false).map(function (x) {return x.highway_mpg}))/mpg_data.filter(y => y.year === 2012 && y.hybrid === false).length
+        }}
+    }
 };
